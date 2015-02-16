@@ -44,6 +44,7 @@ void ShaderProgram::makeProgramFromShaders(std::string vertexShader, std::string
     // link  and error check
     glLinkProgram(_program);
     GLint linked;
+	glGetProgramiv(_program, GL_LINK_STATUS, &linked);
 
     if (!linked) {
         std::cerr << "Shader program failed to link" << std::endl;
