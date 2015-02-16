@@ -8,6 +8,10 @@
 
 #include "Utils.h"
 
+#ifndef __AAPLE__
+#define _CRT_SECURE_NO_DEPRECATE
+#endif
+
 using std::cerr;
 using std::cout;
 using std::endl;

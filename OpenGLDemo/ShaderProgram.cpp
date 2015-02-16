@@ -64,7 +64,7 @@ void ShaderProgram::compileShader(std::string shaderCode, GLenum shaderType)
     GLuint shader = glCreateShader(shaderType);
 
     const char *shaderString = shaderCode.c_str();
-    glShaderSource(shader, 1, (const GLchar *const *)&shaderString, NULL);
+    glShaderSource(shader, 1, (const GLchar **)&shaderString, NULL);
     glCompileShader(shader);
 
     GLint compiled;
