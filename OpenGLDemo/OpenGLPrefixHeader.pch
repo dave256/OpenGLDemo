@@ -1,0 +1,20 @@
+//
+//  OpenGLPrefixHeader.pch
+//  OpenGLBase
+//
+//  Created by David Reed on 11/10/13.
+//  Copyright (c) 2013 David M Reed. All rights reserved.
+//
+
+#ifndef OpenGLBase_OpenGLPrefixHeader_pch
+#define OpenGLBase_OpenGLPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __APPLE__
+#define glGenVertexArrays glGenVertexArraysAPPLE
+#define glBindVertexArray glBindVertexArrayAPPLE
+#endif
+
+#endif

@@ -1,15 +1,48 @@
 //
 //  main.cpp
-//  OpenGLDemo
+//  Texture2D
 //
 //  Created by David Reed on 2/15/15.
 //  Copyright (c) 2015 David Reed. All rights reserved.
 //
 
+#ifndef __APPLE__
+#include <GL/glew.h>
+#endif
+
+
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#include "OpenGLDemo.h"
+
+// must declare as OpenGLBase for Windows
+OpenGLBase *openGLBase;
+
+int main(int argc, char * argv[])
+{
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+    glutInitWindowSize(800, 800);
+    glutInitWindowPosition(30, 60);
+    glutCreateWindow("OpenGL Texture");
+
+#ifndef __APPLE__
+    //glewExperimental = GL_TRUE
+    GLenum err = glewInit();
+
+    if (err != GLEW_OK) {
+        std::cerr << "Error: " << glewGetErrorString(err) << std::endl;
+        return -1;
+    }
+#endif
+
+    OpenGLDemo *scene = new OpenGLDemo;
+    openGLBase = scene;
+
+    scene->setup("");
+
+    glutMainLoop();
+    delete openGLBase;
+
     return 0;
 }

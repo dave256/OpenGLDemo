@@ -1,0 +1,8 @@
+// attributes input from source code via glVertexAttribPointer
+attribute vec4 vPosition;
+
+void main()
+{
+    // vertex shader must set gl_Position to position of the vertex
+    gl_Position = vPosition;
+}

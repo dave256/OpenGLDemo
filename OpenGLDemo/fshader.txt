@@ -1,0 +1,6 @@
+void main()
+{
+    // fragment shader must set gl_FragColor to color to use for the fragment
+    // red
+    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+}

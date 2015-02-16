@@ -8,23 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		03ADB6451A916A3000F1CD29 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03ADB6441A916A3000F1CD29 /* main.cpp */; };
+		03ADB6541A916B1B00F1CD29 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03ADB6521A916B1B00F1CD29 /* Utils.cpp */; };
+		03ADB65D1A916B4900F1CD29 /* OpenGLBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03ADB6571A916B4900F1CD29 /* OpenGLBase.cpp */; };
+		03ADB65E1A916B4900F1CD29 /* OpenGLDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03ADB6591A916B4900F1CD29 /* OpenGLDemo.cpp */; };
+		03ADB65F1A916B4900F1CD29 /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03ADB65B1A916B4900F1CD29 /* ShaderProgram.cpp */; };
+		03ADB6621A916B9A00F1CD29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADB6601A916B9A00F1CD29 /* GLUT.framework */; };
+		03ADB6631A916B9A00F1CD29 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADB6611A916B9A00F1CD29 /* OpenGL.framework */; };
+		03ADB6651A916C3C00F1CD29 /* vshader.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03ADB6551A916B2A00F1CD29 /* vshader.txt */; };
+		03ADB6661A916C3C00F1CD29 /* fshader.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03ADB6561A916B2A00F1CD29 /* fshader.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		03ADB63F1A916A3000F1CD29 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
 			files = (
+				03ADB6651A916C3C00F1CD29 /* vshader.txt in CopyFiles */,
+				03ADB6661A916C3C00F1CD29 /* fshader.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03ADB6411A916A3000F1CD29 /* OpenGLDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		03ADB6441A916A3000F1CD29 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		03ADB64E1A916B0B00F1CD29 /* Angel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Angel.h; path = OpenGLDemo/Angel/Angel.h; sourceTree = "<group>"; };
+		03ADB64F1A916B0B00F1CD29 /* mat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mat.h; path = OpenGLDemo/Angel/mat.h; sourceTree = "<group>"; };
+		03ADB6501A916B0B00F1CD29 /* vec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vec.h; path = OpenGLDemo/Angel/vec.h; sourceTree = "<group>"; };
+		03ADB6511A916B1B00F1CD29 /* OpenGLPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenGLPrefixHeader.pch; path = OpenGLDemo/OpenGLPrefixHeader.pch; sourceTree = "<group>"; };
+		03ADB6521A916B1B00F1CD29 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = OpenGLDemo/Utils.cpp; sourceTree = "<group>"; };
+		03ADB6531A916B1B00F1CD29 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = OpenGLDemo/Utils.h; sourceTree = "<group>"; };
+		03ADB6551A916B2A00F1CD29 /* vshader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vshader.txt; sourceTree = "<group>"; };
+		03ADB6561A916B2A00F1CD29 /* fshader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fshader.txt; sourceTree = "<group>"; };
+		03ADB6571A916B4900F1CD29 /* OpenGLBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLBase.cpp; sourceTree = "<group>"; };
+		03ADB6581A916B4900F1CD29 /* OpenGLBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLBase.h; sourceTree = "<group>"; };
+		03ADB6591A916B4900F1CD29 /* OpenGLDemo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLDemo.cpp; sourceTree = "<group>"; };
+		03ADB65A1A916B4900F1CD29 /* OpenGLDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLDemo.h; sourceTree = "<group>"; };
+		03ADB65B1A916B4900F1CD29 /* ShaderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderProgram.cpp; sourceTree = "<group>"; };
+		03ADB65C1A916B4900F1CD29 /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
+		03ADB6601A916B9A00F1CD29 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		03ADB6611A916B9A00F1CD29 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03ADB6621A916B9A00F1CD29 /* GLUT.framework in Frameworks */,
+				03ADB6631A916B9A00F1CD29 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				03ADB6431A916A3000F1CD29 /* OpenGLDemo */,
+				03ADB64D1A916A6B00F1CD29 /* Shaders */,
+				03ADB64B1A916A3900F1CD29 /* Angel */,
+				03ADB64C1A916A4300F1CD29 /* Utils */,
+				03ADB6641A916B9F00F1CD29 /* Frameworks */,
 				03ADB6421A916A3000F1CD29 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,9 +89,54 @@
 		03ADB6431A916A3000F1CD29 /* OpenGLDemo */ = {
 			isa = PBXGroup;
 			children = (
+				03ADB6571A916B4900F1CD29 /* OpenGLBase.cpp */,
+				03ADB6581A916B4900F1CD29 /* OpenGLBase.h */,
+				03ADB6591A916B4900F1CD29 /* OpenGLDemo.cpp */,
+				03ADB65A1A916B4900F1CD29 /* OpenGLDemo.h */,
+				03ADB65B1A916B4900F1CD29 /* ShaderProgram.cpp */,
+				03ADB65C1A916B4900F1CD29 /* ShaderProgram.h */,
 				03ADB6441A916A3000F1CD29 /* main.cpp */,
 			);
 			path = OpenGLDemo;
+			sourceTree = "<group>";
+		};
+		03ADB64B1A916A3900F1CD29 /* Angel */ = {
+			isa = PBXGroup;
+			children = (
+				03ADB64E1A916B0B00F1CD29 /* Angel.h */,
+				03ADB64F1A916B0B00F1CD29 /* mat.h */,
+				03ADB6501A916B0B00F1CD29 /* vec.h */,
+			);
+			name = Angel;
+			sourceTree = "<group>";
+		};
+		03ADB64C1A916A4300F1CD29 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				03ADB6511A916B1B00F1CD29 /* OpenGLPrefixHeader.pch */,
+				03ADB6521A916B1B00F1CD29 /* Utils.cpp */,
+				03ADB6531A916B1B00F1CD29 /* Utils.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		03ADB64D1A916A6B00F1CD29 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				03ADB6551A916B2A00F1CD29 /* vshader.txt */,
+				03ADB6561A916B2A00F1CD29 /* fshader.txt */,
+			);
+			name = Shaders;
+			path = OpenGLDemo;
+			sourceTree = "<group>";
+		};
+		03ADB6641A916B9F00F1CD29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03ADB6601A916B9A00F1CD29 /* GLUT.framework */,
+				03ADB6611A916B9A00F1CD29 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03ADB6451A916A3000F1CD29 /* main.cpp in Sources */,
+				03ADB65F1A916B4900F1CD29 /* ShaderProgram.cpp in Sources */,
+				03ADB65E1A916B4900F1CD29 /* OpenGLDemo.cpp in Sources */,
+				03ADB65D1A916B4900F1CD29 /* OpenGLBase.cpp in Sources */,
+				03ADB6541A916B1B00F1CD29 /* Utils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,12 +228,14 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = $PROJECT_NAME/OpenGLPrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -187,7 +270,9 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = $PROJECT_NAME/OpenGLPrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
