@@ -1,6 +1,6 @@
 //
 //  ShaderProgram.h
-//  Texture2D
+//  
 //
 //  Created by David Reed on 2/15/15.
 //  Copyright (c) 2015 David Reed. All rights reserved.
@@ -11,12 +11,11 @@
 
 
 #ifdef __APPLE__
-#include <GLUT/glut.h>
+#include <GL/glew.h>
 #include <OpenGL/gl.h>
 #else
 #define _CRT_SECURE_NO_DEPRECATE
 #include <GL/glew.h>
-#include <GL/glut.h>
 #include <GL/gl.h>
 #endif
 

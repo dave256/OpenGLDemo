@@ -1,14 +1,14 @@
 //
 //  ShaderProgram.cpp
-//  Texture2D
+//  
 //
 //  Created by David Reed on 2/15/15.
 //  Copyright (c) 2015 David Reed. All rights reserved.
 //
 
-#include "ShaderProgram.h"
-
 #include <iostream>
+
+#include "ShaderProgram.h"
 
 using std::cerr;
 using std::endl;
@@ -48,8 +48,10 @@ void ShaderProgram::makeProgramFromShaders(std::string vertexShader, std::string
 
     if (!linked) {
         std::cerr << "Shader program failed to link" << std::endl;
-        GLint  logSize;
-        glGetProgramiv(_program, GL_INFO_LOG_LENGTH, &logSize);
+    }
+    GLint  logSize;
+    glGetProgramiv(_program, GL_INFO_LOG_LENGTH, &logSize);
+    if (logSize > 0) {
         char* logMsg = new char[logSize];
         glGetProgramInfoLog(_program, logSize, NULL, logMsg);
         std::cerr << logMsg << std::endl;
@@ -84,3 +86,4 @@ void ShaderProgram::compileShader(std::string shaderCode, GLenum shaderType)
 }
 
 //----------------------------------------------------------------------
+

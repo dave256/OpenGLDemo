@@ -1,6 +1,6 @@
 //
 //  Utils.cpp
-//  Texture2D
+//  
 //
 //  Created by David Reed on 2/15/15.
 //  Copyright (c) 2015 David Reed. All rights reserved.
