@@ -11,7 +11,7 @@
 
 
 #ifdef __APPLE__
-#include <GL/glew.h>
+//#include <GL/glew.h>
 #include <OpenGL/gl.h>
 #else
 #define _CRT_SECURE_NO_DEPRECATE
