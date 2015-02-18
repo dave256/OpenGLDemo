@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03089D8E1A9541470022DF79 /* libfreeglut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03089D8D1A9541470022DF79 /* libfreeglut.a */; };
 		03ADB6451A916A3000F1CD29 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03ADB6441A916A3000F1CD29 /* main.cpp */; };
 		03ADB6541A916B1B00F1CD29 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03ADB6521A916B1B00F1CD29 /* Utils.cpp */; };
 		03ADB65D1A916B4900F1CD29 /* OpenGLBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03ADB6571A916B4900F1CD29 /* OpenGLBase.cpp */; };
 		03ADB65E1A916B4900F1CD29 /* OpenGLDemo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03ADB6591A916B4900F1CD29 /* OpenGLDemo.cpp */; };
 		03ADB65F1A916B4900F1CD29 /* ShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03ADB65B1A916B4900F1CD29 /* ShaderProgram.cpp */; };
-		03ADB6621A916B9A00F1CD29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADB6601A916B9A00F1CD29 /* GLUT.framework */; };
 		03ADB6631A916B9A00F1CD29 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03ADB6611A916B9A00F1CD29 /* OpenGL.framework */; };
 		03ADB6651A916C3C00F1CD29 /* vshader.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03ADB6551A916B2A00F1CD29 /* vshader.txt */; };
 		03ADB6661A916C3C00F1CD29 /* fshader.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 03ADB6561A916B2A00F1CD29 /* fshader.txt */; };
@@ -33,6 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03089D8D1A9541470022DF79 /* libfreeglut.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfreeglut.a; path = "../../Downloads/freeglut-build/lib/libfreeglut.a"; sourceTree = "<group>"; };
 		03ADB6411A916A3000F1CD29 /* OpenGLDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		03ADB6441A916A3000F1CD29 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		03ADB64E1A916B0B00F1CD29 /* Angel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Angel.h; path = OpenGLDemo/Angel/Angel.h; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		03ADB65A1A916B4900F1CD29 /* OpenGLDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLDemo.h; sourceTree = "<group>"; };
 		03ADB65B1A916B4900F1CD29 /* ShaderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderProgram.cpp; sourceTree = "<group>"; };
 		03ADB65C1A916B4900F1CD29 /* ShaderProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderProgram.h; sourceTree = "<group>"; };
-		03ADB6601A916B9A00F1CD29 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		03ADB6611A916B9A00F1CD29 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03ADB6621A916B9A00F1CD29 /* GLUT.framework in Frameworks */,
+				03089D8E1A9541470022DF79 /* libfreeglut.a in Frameworks */,
 				03ADB6631A916B9A00F1CD29 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +133,7 @@
 		03ADB6641A916B9F00F1CD29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03ADB6601A916B9A00F1CD29 /* GLUT.framework */,
+				03089D8D1A9541470022DF79 /* libfreeglut.a */,
 				03ADB6611A916B9A00F1CD29 /* OpenGL.framework */,
 			);
 			name = Frameworks;
@@ -241,6 +241,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Users/dreed/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,6 +283,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Users/dreed/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -287,6 +297,10 @@
 		03ADB6491A916A3000F1CD29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/dreed/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -294,6 +308,10 @@
 		03ADB64A1A916A3000F1CD29 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/dreed/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -317,6 +335,7 @@
 				03ADB64A1A916A3000F1CD29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
